@@ -1,0 +1,31 @@
+defaults:
+  - /agents/MPQAgentConf@_here_
+  - /actors/ParamActorConf@param_actor
+  - /q_networks/MultiPassQConf@q_network
+  - _self_
+
+state_dim: 9
+action_dim: 3
+gamma: 0.9
+memory_size: 10000
+memory_batch_size: 128
+seed: 0
+tau_q: 0.01
+tau_param_actor: 0.001
+learning_rate_q: 0.001
+learning_rate_param_actor: 0.0001
+epsilon_min: 0.01
+epsilon_max: 1
+decay_epsilon_episodes: 1000
+update_steps_burn_in: 500
+update_frequency_steps: 1
+use_cuda: true
+param_actor:
+  state_dim: ${agent.state_dim}
+  action_parameter_sizes: [1,1,1]
+  hidden_layer_sizes: [128]
+q_network:
+  state_dim: ${agent.state_dim}
+  action_dim: ${agent.action_dim}
+  action_parameter_sizes: ${agent.param_actor.action_parameter_sizes}
+  hidden_layer_sizes: [128]

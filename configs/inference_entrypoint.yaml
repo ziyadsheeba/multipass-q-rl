@@ -1,0 +1,4 @@
+defaults:
+  - /entrypoints/InferenceEntrypointConf@_here_
+  - _self_
+training_run_id: 7ccc76012bf24b9ebecba9cbc3e7ec37

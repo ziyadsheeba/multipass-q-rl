@@ -1,0 +1,8 @@
+numpy
+matplotlib
+omegaconf
+hydra-core
+scipy
+gym==0.10.5
+torch 
+mlflow

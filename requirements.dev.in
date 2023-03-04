@@ -1,0 +1,6 @@
+wheel
+black
+isort
+seaborn
+notebook
+pytest

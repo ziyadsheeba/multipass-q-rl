@@ -1,0 +1,13 @@
+defaults:
+  - /entrypoints/TrainEntrypointConf@_here_
+  - agent: mpq_agent
+  - _self_
+n_episodes: 3000
+render_episodes_frequency: 100
+eval_episodes_frequency: 100
+hydra:
+  output_subdir: null
+  verbose: [rl, __main__]
+  run:  
+    dir: .
+    

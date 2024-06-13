@@ -1,4 +1,4 @@
-# RL-Approach
+# Approach
 For solving the platform environment, the proposed architecture in [Multi-Pass Q-Networks for Deep Reinforcement Learning with
 Parameterised Action Spaces](https://arxiv.org/pdf/1905.04388.pdf) was implemented. The development workflow was to start with a simplified implementation of the paper, and sequentially add proposed components/tricks to arrive at a minimal convergent implementation. <br />  <br /> For explainability, a GradCAM-like approach was adopted, which essentially backpropagates the Q-value corresponding to the optimal action to the states and then renormalizes the gradients as a proxy to the absolute feature importance that lead to the optimal action. Each feature has a feature importance in the range (0, 1).
 
